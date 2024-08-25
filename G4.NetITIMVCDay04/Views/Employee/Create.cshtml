@@ -1,0 +1,38 @@
+﻿@model Employee
+
+@{
+    var _Departments = ViewBag.Departments;
+}
+
+
+<form method="post" action="~/Employee/Create">
+
+    <div class="form-group">
+        <label for="Name" class="form-label">Employee Name</label>
+        <input type="text" id="Name" name="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Age" class="form-label">Employee Age</label>
+        <input type="number" id="Age" name="Age" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Salary" class="form-label">Employee Salary</label>
+        <input type="number" id="Salary" name="Salary" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="DepartmentId" class="form-label">Department</label>
+        <select id="DepartmentId" class="form-control" name="DepartmentId">
+            <option value="">-- Select Department --</option>
+            @foreach (var item in _Departments)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+    </div>
+
+    <input type="submit" value="Create Employee" class="btn btn-success my-5" />
+    <a href="~/Employee/Index" class="btn btn-secondary">Cancel</a>
+</form>

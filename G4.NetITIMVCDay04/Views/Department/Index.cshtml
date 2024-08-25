@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Department>
+
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="col">@item.Id</th>
+                <th scope="col">@item.DeptName</th>
+                <th scope="col"><a href="~/Department/ViewDetails/@item.Id" class="btn btn-primary">View</a></th>
+            </tr>
+        }
+    </tbody>
+</table>

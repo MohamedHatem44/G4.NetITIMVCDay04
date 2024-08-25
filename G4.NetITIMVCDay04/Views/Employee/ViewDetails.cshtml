@@ -1,0 +1,12 @@
+﻿@model Employee
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Employee Name: @Model.Name</h5>
+        <h5 class="card-title">Department Name: @Model.Department!.DeptName</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Employee Id: @Model.Id</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Employee Age: @Model.Age</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Employee Salary: @Model.Salary</h6>
+        <a href="~/Employee/Index" class="btn btn-primary my-3">Back</a>
+    </div>
+</div>
